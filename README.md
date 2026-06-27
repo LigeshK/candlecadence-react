@@ -1,16 +1,79 @@
-# React + Vite
+# Candle Cadence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce web app for browsing and purchasing candles, built with React and Firebase.
 
-Currently, two official plugins are available:
+## What this project is
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Candle Cadence is a full-stack React SPA where customers can browse products, manage their cart, place orders, and track them — while admins can manage the product catalog and fulfil orders. Authentication is handled through Firebase.
 
-## React Compiler
+> This project is in early development. Features listed below reflect the planned scope and will be updated as they are completed.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Planned Features
 
-## Expanding the ESLint configuration
+- **Browse & Shop** — product listing with search and filtering
+- **Cart** — add, remove, and adjust quantities before checkout
+- **Authentication** — sign up and log in with email/password via Firebase
+- **My Orders** — view order history and status for logged-in customers
+- **Admin Panel** — manage products (add, edit, delete) and process orders
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+| Layer | Choice |
+|---|---|
+| UI Framework | React 19 |
+| Build Tool | Vite |
+| Routing | React Router v7 |
+| State Management | Redux Toolkit |
+| Backend / Auth / DB | Firebase |
+| Styling | Bootstrap 5.3 + Bootstrap Icons |
+| Notifications | React Toastify, SweetAlert2 |
+
+## Getting Started
+
+**Prerequisites:** Node.js 18+
+
+```bash
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+```
+
+The app runs at `http://localhost:5173` by default.
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+## Project Structure
+
+```
+src/
+  components/layout/   # Header, Footer
+  pages/
+    auth/              # Login, Register
+    shop/              # Cart
+    order/             # My Orders
+    admin/             # Product & Order management
+  router/              # Route definitions
+  utility/             # Shared constants (route paths, etc.)
+```
+
+## Current Status
+
+| Area | Status |
+|---|---|
+| Routing & layout shell | Done |
+| Firebase integration | Planned |
+| Redux store setup | Planned |
+| Authentication (Login / Register) | Planned |
+| Product listing | Planned |
+| Cart | Planned |
+| Checkout & Orders | Planned |
+| Admin panel | Planned |

@@ -1,7 +1,11 @@
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 function App() {
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <div className="d-flex flex-column min-vh-100">
+      <Header></Header>
+      <main className="flex-grow-1">main</main>
+      <Footer />
     </div>
   );
 }
